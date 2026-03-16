@@ -657,14 +657,8 @@
   .panel-section.active { display: block; }
 
   /* ── CHART CONTAINERS — FIX for invisible charts ── */
-  .chart-container {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 20px;
-    position: relative;
-    min-height: 280px;
-  }
+  
+  
   .chart-title {
     font-family: var(--font-head);
     font-size: 13px;
@@ -1077,7 +1071,7 @@
             <p>Industry salary trends, career growth, and skills demand.</p>
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;margin-top:0">
           <div class="chart-container">
             <div class="chart-title">💰 Average Salary by Career (LPA)</div>
             <canvas id="salaryChart"></canvas>
