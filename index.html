@@ -1656,6 +1656,18 @@ document.addEventListener('DOMContentLoaded', () => {
   buildSkillsGrid();
 });
 function downloadReport() {
+  try {
+    const d = userData;
+    if (!d || !d.name) { alert('Please run assessment first!'); return; }
+    const placement = predictPlacement(d);
+    const text = `CAREERFORGE AI REPORT\n=====================\nName: ${d.name}\nBranch: ${d.branch}\nCGPA: ${d.cgpa}\nGoal: ${d.goal}\nPlacement: ${placement}%\nSkills: ${d.skills.join(', ')}`;
+    const a = document.createElement('a');
+    a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(text);
+    a.download = 'CareerReport.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  } catch(e) { alert('Error: ' + e.message); }
   const d = userData;
   const placement = predictPlacement(d);
   const report = `
