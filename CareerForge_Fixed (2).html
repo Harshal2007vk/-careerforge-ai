@@ -936,21 +936,21 @@
         <div class="profile-name" id="r-name">Student</div>
         <div class="profile-branch" id="r-branch">Computer Science</div>
 
-        <svg viewBox="0 0 100 100" class="readiness-ring" style="display:block;margin:16px auto 4px">
-          <defs>
-            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#7c6eff"/>
-              <stop offset="100%" stop-color="#5bc8f5"/>
-            </linearGradient>
-          </defs>
-          <circle class="ring-bg" cx="50" cy="50" r="42" />
-          <circle class="ring-fill" id="ring-fill" cx="50" cy="50" r="42"
-            stroke-dasharray="263.9"
-            stroke-dashoffset="263.9" />
-          <text x="50" y="50" text-anchor="middle" dominant-baseline="middle"
-            font-family="Syne, sans-serif" font-size="16" font-weight="700" fill="#f0eff8"
-            id="r-score-ring">0%</text>
-        </svg>
+        <div style="position:relative;width:100px;height:100px;margin:16px auto 4px">
+          <svg viewBox="0 0 100 100" style="width:100%;height:100%;transform:rotate(-90deg)">
+            <defs>
+              <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#7c6eff"/>
+                <stop offset="100%" stop-color="#5bc8f5"/>
+              </linearGradient>
+            </defs>
+            <circle class="ring-bg" cx="50" cy="50" r="42" />
+            <circle class="ring-fill" id="ring-fill" cx="50" cy="50" r="42"
+              stroke-dasharray="263.9"
+              stroke-dashoffset="263.9" />
+          </svg>
+          <div id="r-score-ring" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text)">0%</div>
+        </div>
         <div class="readiness-label" id="r-label">Career Readiness Score</div>
       </div>
 
