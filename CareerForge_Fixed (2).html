@@ -43,7 +43,6 @@
     overflow-x: hidden;
   }
 
-  /* ── NOISE TEXTURE ── */
   body::before {
     content: '';
     position: fixed;
@@ -54,12 +53,10 @@
     opacity: 0.4;
   }
 
-  /* ── LAYOUT ── */
   #app { position: relative; z-index: 1; }
   .screen { display: none; min-height: 100vh; }
   .screen.active { display: flex; flex-direction: column; }
 
-  /* ── HEADER ── */
   header {
     display: flex;
     align-items: center;
@@ -94,7 +91,6 @@
     letter-spacing: 0.5px;
   }
 
-  /* ── HERO ── */
   .hero {
     flex: 1;
     display: flex;
@@ -195,7 +191,6 @@
   }
   .btn-secondary:hover { color: var(--text); border-color: var(--muted); }
 
-  /* ── FEATURES ROW ── */
   .features-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -222,7 +217,6 @@
   .feature-cell h3 { font-family: var(--font-head); font-size: 14px; font-weight: 600; margin-bottom: 4px; }
   .feature-cell p  { font-size: 13px; color: var(--muted); line-height: 1.5; }
 
-  /* ── FORM SCREEN ── */
   .form-wrap {
     max-width: 860px;
     width: 100%;
@@ -285,11 +279,7 @@
   }
   input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
   .range-val { font-size: 14px; font-weight: 500; min-width: 36px; text-align: right; color: var(--accent); }
-  .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
   .skill-tag {
     padding: 6px 14px;
     border-radius: 20px;
@@ -304,7 +294,6 @@
   .form-actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 40px; }
   .section-title { font-family: var(--font-head); font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; margin-top: 32px; }
 
-  /* ── LOADING ── */
   #loading-screen {
     display: none;
     align-items: center;
@@ -333,7 +322,6 @@
   .loading-step.active { color: var(--text); }
   .step-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
 
-  /* ── RESULTS SCREEN ── */
   .results-layout {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -397,7 +385,6 @@
   .nav-item.active { background: rgba(124,110,255,0.12); color: var(--accent); font-weight: 500; }
   .nav-icon { font-size: 14px; }
 
-  /* ── MAIN CONTENT ── */
   .main-content {
     padding: 32px 40px;
     overflow-y: auto;
@@ -413,7 +400,6 @@
   .results-header h2 { font-family: var(--font-head); font-size: 24px; font-weight: 700; }
   .results-header p  { font-size: 13px; color: var(--muted); margin-top: 4px; }
 
-  /* ── CAREER CARDS ── */
   .career-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
   .career-card {
     background: var(--card);
@@ -461,7 +447,6 @@
   .salary { font-size: 13px; font-weight: 500; color: var(--green); }
   .salary-label { font-size: 11px; color: var(--dim); }
 
-  /* ── SKILL GAP ── */
   .gap-section { margin-bottom: 32px; }
   .gap-section h3 { font-family: var(--font-head); font-size: 18px; font-weight: 600; margin-bottom: 20px; }
   .skill-bars { display: flex; flex-direction: column; gap: 14px; }
@@ -499,7 +484,6 @@
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
   .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
 
-  /* ── ROADMAP ── */
   .roadmap-section { margin-bottom: 32px; }
   .roadmap-section h3 { font-family: var(--font-head); font-size: 18px; font-weight: 600; margin-bottom: 24px; }
   .roadmap-timeline { position: relative; padding-left: 40px; }
@@ -557,7 +541,6 @@
   }
   .resource-link:hover { background: rgba(91,200,245,0.1); border-color: rgba(91,200,245,0.3); }
 
-  /* ── CHAT ── */
   .chat-section { height: 500px; display: flex; flex-direction: column; }
   .chat-messages {
     flex: 1;
@@ -630,7 +613,6 @@
   }
   .quick-prompt:hover { border-color: var(--accent); color: var(--accent); }
 
-  /* ── SCORE CARDS ── */
   .score-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
   .score-card {
     background: var(--card);
@@ -646,7 +628,6 @@
   .col-blue   { color: var(--blue); }
   .col-accent { color: var(--accent); }
 
-  /* ── TABS ── */
   .tab-row { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
   .tab {
     padding: 10px 20px;
@@ -660,7 +641,6 @@
   .tab:hover { color: var(--text); }
   .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-  /* ── TYPING INDICATOR ── */
   .typing { display: flex; gap: 4px; align-items: center; padding: 10px 14px; }
   .typing span {
     width: 6px; height: 6px;
@@ -672,11 +652,32 @@
   .typing span:nth-child(3) { animation-delay: 0.4s; }
   @keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
 
-  /* ── PANEL SECTIONS ── */
+  /* ── PANEL SECTIONS — all live inside main-content ── */
   .panel-section { display: none; }
   .panel-section.active { display: block; }
 
-  /* ── ANIMATIONS ── */
+  /* ── CHART CONTAINERS — FIX for invisible charts ── */
+  .chart-container {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    position: relative;
+    min-height: 280px;
+  }
+  .chart-title {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.3px;
+    margin-bottom: 16px;
+  }
+  .chart-container canvas {
+    max-height: 220px;
+    width: 100% !important;
+  }
+
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -688,7 +689,6 @@
   .fade-up-4 { animation-delay: 0.4s; opacity: 0; }
   .fade-up-5 { animation-delay: 0.5s; opacity: 0; }
 
-  /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .results-layout { grid-template-columns: 1fr; }
     .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
@@ -701,12 +701,10 @@
     h1 { font-size: 36px; }
   }
 
-  /* ── SCROLLBAR ── */
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
 
-  /* ── TYPING ANIMATION ── */
   .typewriter { overflow: hidden; border-right: 2px solid var(--accent); white-space: nowrap; animation: typing 1.5s steps(30) forwards, blink 0.7s step-end 3; }
   @keyframes typing { from{width:0} to{width:100%} }
   @keyframes blink { 50%{border-color:transparent} }
@@ -715,9 +713,7 @@
 <body>
 <div id="app">
 
-<!-- ══════════════════════════════════════
-     SCREEN 1 — LANDING
-══════════════════════════════════════ -->
+<!-- SCREEN 1 — LANDING -->
 <div id="screen-landing" class="screen active">
   <header>
     <div class="logo">
@@ -780,9 +776,7 @@
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     SCREEN 2 — FORM
-══════════════════════════════════════ -->
+<!-- SCREEN 2 — FORM -->
 <div id="screen-form" class="screen">
   <header>
     <div class="logo">
@@ -803,7 +797,6 @@
     </div>
 
     <div class="form-grid">
-      <!-- Name & Branch -->
       <div class="form-group fade-up fade-up-1">
         <label>Your Name</label>
         <input type="text" id="f-name" placeholder="e.g. Harsh Patel" oninput="updateProgress()">
@@ -823,7 +816,6 @@
         </select>
       </div>
 
-      <!-- CGPA & Year -->
       <div class="form-group fade-up fade-up-2">
         <label>Current CGPA</label>
         <div class="range-wrap">
@@ -843,7 +835,6 @@
         </select>
       </div>
 
-      <!-- Internships & Projects -->
       <div class="form-group fade-up fade-up-3">
         <label>Internships completed</label>
         <div class="range-wrap">
@@ -859,7 +850,6 @@
         </div>
       </div>
 
-      <!-- Coding & Communication score -->
       <div class="form-group fade-up fade-up-4">
         <label>Coding skill (self-assess)</label>
         <div class="range-wrap">
@@ -875,7 +865,6 @@
         </div>
       </div>
 
-      <!-- Career goal -->
       <div class="form-group full fade-up fade-up-4">
         <label>Career Goal</label>
         <select id="f-goal" onchange="updateProgress()">
@@ -895,15 +884,11 @@
         </select>
       </div>
 
-      <!-- Skills -->
       <div class="form-group full fade-up fade-up-5">
         <label>Skills you already have (select all that apply)</label>
-        <div class="skills-grid" id="skills-grid">
-          <!-- populated by JS -->
-        </div>
+        <div class="skills-grid" id="skills-grid"></div>
       </div>
 
-      <!-- Hackathon -->
       <div class="form-group full fade-up fade-up-5">
         <label>Hackathon / competition participation</label>
         <select id="f-hack" onchange="updateProgress()">
@@ -920,9 +905,7 @@
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     LOADING
-══════════════════════════════════════ -->
+<!-- LOADING -->
 <div id="loading-screen">
   <div class="loader-ring"></div>
   <div style="text-align:center">
@@ -938,9 +921,7 @@
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     SCREEN 3 — RESULTS
-══════════════════════════════════════ -->
+<!-- SCREEN 3 — RESULTS -->
 <div id="screen-results" class="screen">
   <header>
     <div class="logo">
@@ -984,12 +965,12 @@
         <li class="nav-item" onclick="setPanel('gaps',this)"><span class="nav-icon">📊</span> Skill Gap Analysis</li>
         <li class="nav-item" onclick="setPanel('roadmap',this)"><span class="nav-icon">🗺️</span> AI Roadmap</li>
         <li class="nav-item" onclick="setPanel('chat',this)"><span class="nav-icon">💬</span> AI Career Chat</li>
-<li class="nav-item" onclick="setPanel('interview',this)"><span class="nav-icon">🎯</span> Mock Interview</li>
-<li class="nav-item" onclick="setPanel('insights',this)"><span class="nav-icon">📈</span> Market Insights</li>
+        <li class="nav-item" onclick="setPanel('interview',this)"><span class="nav-icon">🎯</span> Mock Interview</li>
+        <li class="nav-item" onclick="setPanel('insights',this)"><span class="nav-icon">📈</span> Market Insights</li>
       </ul>
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN CONTENT — ALL PANELS ARE INSIDE THIS DIV -->
     <div class="main-content">
 
       <!-- Score cards -->
@@ -1012,7 +993,7 @@
         </div>
       </div>
 
-      <!-- ── PANEL: CAREER MATCHES ── -->
+      <!-- PANEL: CAREER MATCHES -->
       <div class="panel-section active" id="panel-careers">
         <div class="results-header">
           <div>
@@ -1020,12 +1001,10 @@
             <p id="careers-sub">Based on your profile, here are the best-fit careers for you.</p>
           </div>
         </div>
-        <div class="career-grid" id="career-grid">
-          <!-- filled by JS -->
-        </div>
+        <div class="career-grid" id="career-grid"></div>
       </div>
 
-      <!-- ── PANEL: SKILL GAPS ── -->
+      <!-- PANEL: SKILL GAPS -->
       <div class="panel-section" id="panel-gaps">
         <div class="results-header">
           <div>
@@ -1038,12 +1017,10 @@
           <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div>Moderate (40–69)</div>
           <div class="legend-item"><div class="legend-dot" style="background:#ff5f6d"></div>Needs work (&lt;40)</div>
         </div>
-        <div class="skill-bars" id="skill-bars">
-          <!-- filled by JS -->
-        </div>
+        <div class="skill-bars" id="skill-bars"></div>
       </div>
 
-      <!-- ── PANEL: ROADMAP ── -->
+      <!-- PANEL: ROADMAP -->
       <div class="panel-section" id="panel-roadmap">
         <div class="results-header">
           <div>
@@ -1051,12 +1028,10 @@
             <p id="roadmap-sub">Generated by Amazon Bedrock — personalized to your profile.</p>
           </div>
         </div>
-        <div class="roadmap-timeline" id="roadmap-steps">
-          <!-- filled by JS -->
-        </div>
+        <div class="roadmap-timeline" id="roadmap-steps"></div>
       </div>
 
-      <!-- ── PANEL: CHAT ── -->
+      <!-- PANEL: CHAT -->
       <div class="panel-section" id="panel-chat">
         <div class="results-header">
           <div>
@@ -1072,9 +1047,7 @@
           <span class="quick-prompt" onclick="askQuestion(this.textContent)">How long to become job-ready?</span>
         </div>
         <div class="chat-section">
-          <div class="chat-messages" id="chat-messages">
-            <!-- filled by JS -->
-          </div>
+          <div class="chat-messages" id="chat-messages"></div>
           <div class="chat-input-row">
             <input class="chat-input" id="chat-input" placeholder="Ask about your career path…" onkeydown="if(event.key==='Enter')sendChat()">
             <button class="chat-send" onclick="sendChat()">Send</button>
@@ -1082,11 +1055,7 @@
         </div>
       </div>
 
-    </div>
-  </div>
-</div>
-
-<!-- ── PANEL: INTERVIEW ── -->
+      <!-- PANEL: MOCK INTERVIEW — NOW CORRECTLY INSIDE main-content -->
       <div class="panel-section" id="panel-interview">
         <div class="results-header">
           <div>
@@ -1099,7 +1068,8 @@
           <div id="interview-questions"></div>
         </div>
       </div>
-<!-- ── PANEL: MARKET INSIGHTS ── -->
+
+      <!-- PANEL: MARKET INSIGHTS — NOW CORRECTLY INSIDE main-content -->
       <div class="panel-section" id="panel-insights">
         <div class="results-header">
           <div>
@@ -1122,12 +1092,14 @@
           <canvas id="skillsChart" style="max-height:250px"></canvas>
         </div>
       </div>
-</div><!-- #app -->
+
+    </div><!-- end .main-content -->
+  </div><!-- end .results-layout -->
+</div><!-- end #screen-results -->
+
+</div><!-- end #app -->
 
 <script>
-/* ══════════════════════════════════════
-   DATA & CONFIG
-══════════════════════════════════════ */
 const ALL_SKILLS = [
   'Python','JavaScript','React','Node.js','SQL','Machine Learning',
   'Data Analysis','AWS','Docker','Git','C++','Java','TensorFlow',
@@ -1167,30 +1139,30 @@ const CAREER_DATA = {
     required: {Linux:80,Docker:85,Git:80,'CI/CD':85,AWS:70,Monitoring:65,Scripting:75}
   },
   'Product Manager': {
-  icon: '📱', salary: '₹10–30 LPA',
-  desc: 'Define product vision and drive cross-functional teams to build great products.',
-  tags: ['Strategy','Analytics','Leadership','Agile'],
-  required: {Communication:90,Analytics:75,Leadership:80,'Product Thinking':85,SQL:60,Agile:70}
-},
-'Mobile App Developer': {
-  icon: '📲', salary: '₹6–18 LPA',
-  desc: 'Build iOS and Android applications used by millions.',
-  tags: ['React Native','Flutter','Swift','Kotlin'],
-  required: {JavaScript:80,'React Native':85,Git:75,'REST APIs':70,UI:65,Testing:60}
-},
-'Blockchain Developer': {
-  icon: '⛓️', salary: '₹8–25 LPA',
-  desc: 'Build decentralized applications and smart contracts.',
-  tags: ['Solidity','Web3.js','Ethereum','DeFi'],
-  required: {Solidity:85,JavaScript:80,'Web3.js':75,Cryptography:70,Git:75,Security:65}
-},
-'UI/UX Designer': {
-  icon: '🎨', salary: '₹5–16 LPA',
-  desc: 'Design beautiful, user-centered digital experiences.',
-  tags: ['Figma','Research','Prototyping','Design Systems'],
-  required: {Figma:90,'User Research':80,Prototyping:85,'Design Thinking':80,Communication:75,HTML:50}
-},
-'Cybersecurity Analyst': {
+    icon: '📱', salary: '₹10–30 LPA',
+    desc: 'Define product vision and drive cross-functional teams to build great products.',
+    tags: ['Strategy','Analytics','Leadership','Agile'],
+    required: {Communication:90,Analytics:75,Leadership:80,'Product Thinking':85,SQL:60,Agile:70}
+  },
+  'Mobile App Developer': {
+    icon: '📲', salary: '₹6–18 LPA',
+    desc: 'Build iOS and Android applications used by millions.',
+    tags: ['React Native','Flutter','Swift','Kotlin'],
+    required: {JavaScript:80,'React Native':85,Git:75,'REST APIs':70,UI:65,Testing:60}
+  },
+  'Blockchain Developer': {
+    icon: '⛓️', salary: '₹8–25 LPA',
+    desc: 'Build decentralized applications and smart contracts.',
+    tags: ['Solidity','Web3.js','Ethereum','DeFi'],
+    required: {Solidity:85,JavaScript:80,'Web3.js':75,Cryptography:70,Git:75,Security:65}
+  },
+  'UI/UX Designer': {
+    icon: '🎨', salary: '₹5–16 LPA',
+    desc: 'Design beautiful, user-centered digital experiences.',
+    tags: ['Figma','Research','Prototyping','Design Systems'],
+    required: {Figma:90,'User Research':80,Prototyping:85,'Design Thinking':80,Communication:75,HTML:50}
+  },
+  'Cybersecurity Analyst': {
     icon: '🔐', salary: '₹6–20 LPA',
     desc: 'Protect systems and networks from cyber threats.',
     tags: ['Networking','Ethical Hacking','SIEM','Risk Analysis'],
@@ -1201,9 +1173,6 @@ const CAREER_DATA = {
 let userData = {};
 let selectedSkills = [];
 
-/* ══════════════════════════════════════
-   SCREEN MANAGEMENT
-══════════════════════════════════════ */
 function showScreen(name) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById('loading-screen').classList.remove('active');
@@ -1228,9 +1197,6 @@ function goToDemoResults() {
   startLoading();
 }
 
-/* ══════════════════════════════════════
-   FORM
-══════════════════════════════════════ */
 function buildSkillsGrid() {
   const g = document.getElementById('skills-grid');
   g.innerHTML = ALL_SKILLS.map(s =>
@@ -1257,25 +1223,22 @@ function updateProgress() {
 }
 
 function analyzeProfile() {
-  const name  = document.getElementById('f-name').value.trim() || 'Student';
+  const name   = document.getElementById('f-name').value.trim() || 'Student';
   const branch = document.getElementById('f-branch').value || 'Computer Science';
-  const cgpa  = parseFloat(document.getElementById('f-cgpa').value);
-  const year  = document.getElementById('f-year').value || '3rd Year';
+  const cgpa   = parseFloat(document.getElementById('f-cgpa').value);
+  const year   = document.getElementById('f-year').value || '3rd Year';
   const intern = parseInt(document.getElementById('f-intern').value);
-  const proj  = parseInt(document.getElementById('f-projects').value);
+  const proj   = parseInt(document.getElementById('f-projects').value);
   const coding = parseInt(document.getElementById('f-coding').value);
-  const comm  = parseInt(document.getElementById('f-comm').value);
-  const goal  = document.getElementById('f-goal').value || 'AI / ML Engineer';
-  const hack  = document.getElementById('f-hack').value;
+  const comm   = parseInt(document.getElementById('f-comm').value);
+  const goal   = document.getElementById('f-goal').value || 'AI / ML Engineer';
+  const hack   = document.getElementById('f-hack').value;
 
   userData = { name, branch, cgpa, year, internships: intern,
     projects: proj, coding, comm, goal, hackathon: hack, skills: [...selectedSkills] };
   startLoading();
 }
 
-/* ══════════════════════════════════════
-   LOADING SEQUENCE
-══════════════════════════════════════ */
 function startLoading() {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById('loading-screen').classList.add('active');
@@ -1294,30 +1257,24 @@ function startLoading() {
   }, 700);
 }
 
-/* ══════════════════════════════════════
-   ML SIMULATION (placement predictor)
-══════════════════════════════════════ */
 function predictPlacement(d) {
   let score = 40;
-  if (d.cgpa >= 8.5)        score += 18;
-  else if (d.cgpa >= 7.5)   score += 12;
-  else if (d.cgpa >= 6.5)   score += 6;
-  if (d.internships >= 3)   score += 16;
+  if (d.cgpa >= 8.5)           score += 18;
+  else if (d.cgpa >= 7.5)      score += 12;
+  else if (d.cgpa >= 6.5)      score += 6;
+  if (d.internships >= 3)      score += 16;
   else if (d.internships >= 1) score += 8;
-  if (d.projects >= 5)      score += 14;
-  else if (d.projects >= 2) score += 7;
-  if (d.coding >= 70)       score += 10;
-  else if (d.coding >= 45)  score += 5;
-  if (d.hackathon === 'Yes') score += 6;
+  if (d.projects >= 5)         score += 14;
+  else if (d.projects >= 2)    score += 7;
+  if (d.coding >= 70)          score += 10;
+  else if (d.coding >= 45)     score += 5;
+  if (d.hackathon === 'Yes')   score += 6;
   const csFields = ['Computer Science','Information Technology','Data Science','Artificial Intelligence'];
   if (csFields.includes(d.branch)) score += 8;
   score += Math.min(d.skills.length * 2, 14);
   return Math.min(98, Math.max(35, score));
 }
 
-/* ══════════════════════════════════════
-   RESULTS
-══════════════════════════════════════ */
 function showResults() {
   document.getElementById('loading-screen').classList.remove('active');
   document.getElementById('screen-results').classList.add('active');
@@ -1328,13 +1285,11 @@ function showResults() {
   const readiness = Math.round((placement * 0.6) + (d.skills.length * 2) + (d.projects * 3));
   const clampedReadiness = Math.min(95, Math.max(30, readiness));
 
-  // Profile card
   const initials = d.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
   document.getElementById('r-avatar').textContent = initials;
   document.getElementById('r-name').textContent = d.name;
   document.getElementById('r-branch').textContent = d.branch + ' · ' + (d.year || '3rd Year');
 
-  // Ring animation
   const circumference = 263.9;
   const offset = circumference - (circumference * clampedReadiness / 100);
   setTimeout(() => {
@@ -1342,7 +1297,6 @@ function showResults() {
     animateNum('r-score-ring', 0, clampedReadiness, '%', 1400);
   }, 300);
 
-  // Score cards
   animateNum('r-placement', 0, placement, '%', 1200);
   animateNum('r-skills-count', 0, d.skills.length, '', 1000);
   const goalData = CAREER_DATA[d.goal] || CAREER_DATA['AI / ML Engineer'];
@@ -1352,7 +1306,6 @@ function showResults() {
   animateNum('r-timeline', 0, months, '', 1100);
   document.getElementById('r-label').textContent = 'Career Readiness Score';
 
-  // Build career matches
   buildCareers(d);
   buildSkillGaps(d);
   buildRoadmap(d);
@@ -1375,9 +1328,6 @@ function animateNum(id, from, to, suffix, duration) {
   requestAnimationFrame(fn);
 }
 
-/* ══════════════════════════════════════
-   CAREER CARDS
-══════════════════════════════════════ */
 function buildCareers(d) {
   const grid = document.getElementById('career-grid');
   const careers = Object.entries(CAREER_DATA);
@@ -1419,9 +1369,6 @@ function buildCareers(d) {
   }).join('');
 }
 
-/* ══════════════════════════════════════
-   SKILL GAPS
-══════════════════════════════════════ */
 function buildSkillGaps(d) {
   const container = document.getElementById('skill-bars');
   const goalData = CAREER_DATA[d.goal] || CAREER_DATA['AI / ML Engineer'];
@@ -1453,9 +1400,6 @@ function buildSkillGaps(d) {
   }, 200);
 }
 
-/* ══════════════════════════════════════
-   AI ROADMAP
-══════════════════════════════════════ */
 function buildRoadmap(d) {
   const goal = d.goal || 'AI / ML Engineer';
   document.getElementById('roadmap-sub').textContent =
@@ -1535,9 +1479,6 @@ function buildRoadmap(d) {
   }, 100);
 }
 
-/* ══════════════════════════════════════
-   AI CHAT (powered by Claude API)
-══════════════════════════════════════ */
 let chatHistory = [];
 
 function initChat(d) {
@@ -1563,14 +1504,12 @@ async function askQuestion(q) {
   const messages = document.getElementById('chat-messages');
   const d = userData;
 
-  // User bubble
   messages.innerHTML += `
     <div class="msg user">
       <div class="msg-avatar user-avatar">${d.name[0]}</div>
       <div class="msg-bubble user-bubble">${q}</div>
     </div>`;
 
-  // Typing indicator
   const typingId = 'typing-' + Date.now();
   messages.innerHTML += `
     <div class="msg" id="${typingId}">
@@ -1594,9 +1533,9 @@ Student profile:
 Rules:
 1. Be SPECIFIC to this student's exact numbers and skills
 2. Give actionable advice with exact resources, course names, timelines
-3. Mention specific Indian companies hiring for ${d.goal} (TCS, Infosys, Wipro, startups, unicorns)
+3. Mention specific Indian companies hiring for ${d.goal}
 4. Keep responses to 3-4 sentences max
-5. Be encouraging but brutally honest
+5. Be encouraging but honest
 6. No markdown, no bullet points — conversational tone only`;
 
   chatHistory.push({ role: 'user', content: q });
@@ -1605,11 +1544,11 @@ Rules:
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
-  'Content-Type': 'application/json',
-  'x-api-key': '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',
-  'anthropic-version': '2023-06-01',
-  'anthropic-dangerous-direct-browser-access': 'true'
-},
+        'Content-Type': 'application/json',
+        'x-api-key': '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',
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
         max_tokens: 1000,
@@ -1648,26 +1587,23 @@ function fallbackReply(q, d) {
   }
   if (ql.includes('placement') || ql.includes('ready')) {
     const pct = predictPlacement(d);
-    return `Your placement probability is ${pct}%. ${pct >= 70 ? 'You\'re in good shape!' : 'You need to close a few gaps.'} Adding ${Math.max(0, 3 - d.internships)} more internship${3-d.internships>1?'s':''} and ${Math.max(0, 5 - d.projects)} more projects would significantly boost your chances. Focus on ${d.goal} specific skills.`;
+    return `Your placement probability is ${pct}%. ${pct >= 70 ? "You're in good shape!" : 'You need to close a few gaps.'} Adding ${Math.max(0, 3 - d.internships)} more internship${3-d.internships>1?'s':''} and ${Math.max(0, 5 - d.projects)} more projects would significantly boost your chances.`;
   }
   if (ql.includes('gap') || ql.includes('missing') || ql.includes('learn')) {
     const goalInfo = CAREER_DATA[d.goal] || CAREER_DATA['AI / ML Engineer'];
     const missing = Object.keys(goalInfo.required).filter(s => !d.skills.some(sk => sk.toLowerCase().includes(s.toLowerCase())));
     return `Your biggest gaps for ${d.goal} are: ${missing.slice(0,3).join(', ')}. ${missing[0]} should be your immediate priority — invest 4–6 weeks on it with a real project. Check the Roadmap tab for specific resources.`;
   }
-  if (ql.includes('resource') || ql.includes('learn') || ql.includes('course')) {
+  if (ql.includes('resource') || ql.includes('course')) {
     return `For ${d.goal}, the best free resources are: Coursera (Andrew Ng courses), freeCodeCamp, and Kaggle Learn. Supplement with hands-on projects using real datasets. GitHub is your portfolio — every project should be there.`;
   }
   if (ql.includes('time') || ql.includes('long') || ql.includes('month')) {
     const months = Math.max(3, Math.round((100 - Math.min(95, predictPlacement(d))) / 8));
-    return `At your current pace, you need roughly ${months} months to be job-ready for ${d.goal}. With daily 2-hour study sessions and building one project per month, you can cut that to ${Math.max(2, months - 2)} months. Consistency matters more than intensity.`;
+    return `At your current pace, you need roughly ${months} months to be job-ready for ${d.goal}. With daily 2-hour study sessions and building one project per month, you can cut that to ${Math.max(2, months - 2)} months.`;
   }
-  return `Great question! For a ${d.branch} student targeting ${d.goal} with ${d.cgpa} CGPA, I'd recommend focusing on practical project experience. Your ${d.skills.length} existing skills are a solid foundation — now it's about depth over breadth. Pick one specialization and go deep.`;
+  return `Great question! For a ${d.branch} student targeting ${d.goal} with ${d.cgpa} CGPA, I'd recommend focusing on practical project experience. Your ${d.skills.length} existing skills are a solid foundation — now it's about depth over breadth.`;
 }
 
-/* ══════════════════════════════════════
-   NAVIGATION
-══════════════════════════════════════ */
 function setPanel(name, el) {
   document.querySelectorAll('.panel-section').forEach(p => p.classList.remove('active'));
   document.getElementById('panel-' + name)?.classList.add('active');
@@ -1682,7 +1618,7 @@ function setPanel(name, el) {
     }, 100);
   }
   if (name === 'insights') {
-    setTimeout(() => buildInsightsCharts(), 100);
+    setTimeout(() => buildInsightsCharts(), 150);
   }
   if (name === 'roadmap') {
     setTimeout(() => {
@@ -1692,26 +1628,13 @@ function setPanel(name, el) {
   }
 }
 
-/* ══════════════════════════════════════
-   INIT
-══════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   buildSkillsGrid();
 });
+
 function downloadReport() {
-  try {
-    const d = userData;
-    if (!d || !d.name) { alert('Please run assessment first!'); return; }
-    const placement = predictPlacement(d);
-    const text = `CAREERFORGE AI REPORT\n=====================\nName: ${d.name}\nBranch: ${d.branch}\nCGPA: ${d.cgpa}\nGoal: ${d.goal}\nPlacement: ${placement}%\nSkills: ${d.skills.join(', ')}`;
-    const a = document.createElement('a');
-    a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(text);
-    a.download = 'CareerReport.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  } catch(e) { alert('Error: ' + e.message); }
   const d = userData;
+  if (!d || !d.name) { alert('Please run assessment first!'); return; }
   const placement = predictPlacement(d);
   const report = `
 CAREERFORGE AI — CAREER REPORT
@@ -1737,6 +1660,7 @@ Generated by CareerForge AI — PS11
   a.download = `CareerForge_Report_${d.name}.txt`;
   a.click();
 }
+
 async function generateInterview() {
   const d = userData;
   const btn = document.querySelector('#interview-container .btn-primary');
@@ -1790,8 +1714,8 @@ Return ONLY the JSON array, no markdown.`
   btn.textContent = 'Regenerate Questions 🔄';
   btn.disabled = false;
 }
+
 function buildInsightsCharts() {
-  // Salary Chart
   const sc = document.getElementById('salaryChart');
   if (sc && !sc.dataset.built) {
     sc.dataset.built = 'true';
@@ -1807,6 +1731,8 @@ function buildInsightsCharts() {
         }]
       },
       options: {
+        responsive: true,
+        maintainAspectRatio: true,
         plugins: { legend: { display: false } },
         scales: {
           y: { ticks: { color: '#8b8a9e' }, grid: { color: 'rgba(255,255,255,0.05)' } },
@@ -1816,7 +1742,6 @@ function buildInsightsCharts() {
     });
   }
 
-  // Growth Chart
   const gc = document.getElementById('growthChart');
   if (gc && !gc.dataset.built) {
     gc.dataset.built = 'true';
@@ -1825,12 +1750,14 @@ function buildInsightsCharts() {
       data: {
         labels: ['2020','2021','2022','2023','2024','2025'],
         datasets: [
-          { label: 'AI/ML', data: [8,10,13,16,20,24], borderColor: '#7c6eff', tension: 0.4, fill: false },
-          { label: 'Full Stack', data: [6,8,10,12,14,18], borderColor: '#2dd4a0', tension: 0.4, fill: false },
-          { label: 'Cloud', data: [7,9,11,13,16,20], borderColor: '#5bc8f5', tension: 0.4, fill: false }
+          { label: 'AI/ML',       data: [8,10,13,16,20,24], borderColor: '#7c6eff', tension: 0.4, fill: false },
+          { label: 'Full Stack',  data: [6,8,10,12,14,18],  borderColor: '#2dd4a0', tension: 0.4, fill: false },
+          { label: 'Cloud',       data: [7,9,11,13,16,20],  borderColor: '#5bc8f5', tension: 0.4, fill: false }
         ]
       },
       options: {
+        responsive: true,
+        maintainAspectRatio: true,
         plugins: { legend: { labels: { color: '#f0eff8' } } },
         scales: {
           y: { ticks: { color: '#8b8a9e' }, grid: { color: 'rgba(255,255,255,0.05)' } },
@@ -1840,7 +1767,6 @@ function buildInsightsCharts() {
     });
   }
 
-  // Skills Demand Chart
   const sk = document.getElementById('skillsChart');
   if (sk && !sk.dataset.built) {
     sk.dataset.built = 'true';
@@ -1855,6 +1781,8 @@ function buildInsightsCharts() {
         }]
       },
       options: {
+        responsive: true,
+        maintainAspectRatio: true,
         plugins: { legend: { labels: { color: '#f0eff8', font: { size: 11 } } } }
       }
     });
