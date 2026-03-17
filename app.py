@@ -74,7 +74,7 @@ async def load_model() -> None:
     except Exception as exc:
         logger.error("Failed to load model: %s", exc)
 
-
+html_path = Path("careerforge.html")
 def _get_artifacts() -> CareerRecommenderArtifacts:
     if _artifacts is None:
         raise HTTPException(

@@ -610,6 +610,62 @@
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+  /* ── ROADMAP LIBRARY ─────────────────────────── */
+  .lib-controls { display:flex; gap:12px; margin-bottom:24px; flex-wrap:wrap; align-items:center; }
+  .lib-search-wrap { flex:1; min-width:200px; position:relative; }
+  .lib-search-icon { position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--dim); font-size:1rem; pointer-events:none; }
+  .lib-search { width:100%; background:var(--card); border:1px solid var(--border2); color:var(--text); font-family:var(--font-body); font-size:13px; padding:10px 14px 10px 36px; border-radius:var(--radius-sm); outline:none; transition:border-color 0.2s; }
+  .lib-search:focus { border-color:var(--accent); }
+  .lib-search::placeholder { color:var(--dim); }
+  .lib-filters { display:flex; gap:6px; flex-wrap:wrap; }
+  .lib-filter { background:var(--card); border:1px solid var(--border2); color:var(--muted); font-family:var(--font-body); font-size:12px; font-weight:500; padding:7px 14px; border-radius:20px; cursor:pointer; transition:all 0.15s; }
+  .lib-filter:hover { border-color:var(--accent); color:var(--text); }
+  .lib-filter.active { background:rgba(124,110,255,0.15); border-color:rgba(124,110,255,0.4); color:var(--accent); }
+  .lib-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(255px,1fr)); gap:14px; margin-bottom:20px; }
+  .lib-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; cursor:pointer; transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s; animation:fadeUp 0.35s ease both; }
+  .lib-card:hover { transform:translateY(-3px); }
+  .lib-card-top { display:flex; align-items:center; gap:12px; padding:16px 16px 10px; }
+  .lib-card-emoji { width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
+  .lib-card-title { font-family:var(--font-head); font-size:14px; font-weight:600; line-height:1.2; }
+  .lib-cat-badge { font-size:10px; letter-spacing:0.06em; text-transform:uppercase; padding:2px 7px; border-radius:4px; font-weight:500; margin-top:4px; display:inline-block; }
+  .lib-card-pills { padding:0 16px 10px; display:flex; flex-wrap:wrap; gap:5px; }
+  .lib-pill { font-size:11px; background:var(--bg3); border:1px solid var(--border); color:var(--dim); padding:3px 8px; border-radius:4px; }
+  .lib-card-foot { padding:10px 16px; border-top:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; }
+  .lib-topic-count { font-size:11px; color:var(--dim); }
+  .lib-explore { font-size:11px; font-weight:600; letter-spacing:0.04em; background:none; border:none; cursor:pointer; transition:gap 0.15s; display:flex; align-items:center; gap:4px; }
+  .lib-card:hover .lib-explore { gap:7px; }
+  .lib-card.lib-matched { border-color:rgba(45,212,160,0.4); }
+  .lib-empty { text-align:center; padding:60px 20px; color:var(--muted); }
+  .lcat-ai     { --lc:#7c6eff; --lb:rgba(124,110,255,0.1); }
+  .lcat-web    { --lc:#2dd4a0; --lb:rgba(45,212,160,0.1);  }
+  .lcat-data   { --lc:#ffd166; --lb:rgba(255,209,102,0.1); }
+  .lcat-devops { --lc:#ff5fa0; --lb:rgba(255,95,160,0.1);  }
+  .lcat-mobile { --lc:#5bc8f5; --lb:rgba(91,200,245,0.1);  }
+  .lcat-design { --lc:#ff8c42; --lb:rgba(255,140,66,0.1);  }
+  .lcat-other  { --lc:#c46aff; --lb:rgba(196,106,255,0.1); }
+  .lib-card-emoji { background:var(--lb); color:var(--lc); }
+  .lib-cat-badge  { background:var(--lb); color:var(--lc); }
+  .lib-explore    { color:var(--lc); }
+  .lib-card:hover { border-color:var(--lc); box-shadow:0 6px 24px var(--lb); }
+  .lib-modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.72); backdrop-filter:blur(10px); z-index:200; display:none; align-items:center; justify-content:center; padding:24px; }
+  .lib-modal-overlay.open { display:flex; }
+  .lib-modal { background:var(--card); border:1px solid var(--border2); border-radius:18px; max-width:660px; width:100%; max-height:82vh; overflow-y:auto; position:relative; animation:fadeUp 0.28s ease; }
+  .lib-modal-close { position:absolute; top:16px; right:16px; background:var(--bg3); border:1px solid var(--border2); color:var(--muted); width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:14px; transition:color 0.2s; }
+  .lib-modal-close:hover { color:var(--text); }
+  .lib-modal-hero { padding:28px 28px 20px; border-bottom:1px solid var(--border); display:flex; gap:16px; align-items:flex-start; }
+  .lib-modal-icon { width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; flex-shrink:0; }
+  .lib-modal-title { font-family:var(--font-head); font-size:20px; font-weight:700; margin-bottom:6px; }
+  .lib-modal-desc { font-size:13px; color:var(--muted); line-height:1.55; }
+  .lib-modal-body { padding:22px 28px 28px; }
+  .lib-sec-label { font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dim); font-weight:600; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+  .lib-sec-label::after { content:''; flex:1; height:1px; background:var(--border); }
+  .lib-topics { display:flex; flex-wrap:wrap; gap:7px; }
+  .lib-topic-tag { font-size:12px; padding:5px 11px; border-radius:6px; background:var(--bg3); border:1px solid var(--border); color:var(--text); transition:border-color 0.15s,color 0.15s; }
+  .lib-topic-tag:hover { border-color:var(--accent); color:var(--accent); }
+  .lib-related { display:flex; flex-wrap:wrap; gap:7px; }
+  .lib-rel-chip { font-size:12px; padding:6px 12px; border-radius:6px; background:var(--bg3); border:1px solid var(--border); color:var(--muted); cursor:pointer; transition:all 0.15s; }
+  .lib-rel-chip:hover { border-color:var(--green); color:var(--green); }
 </style>
 </head>
 <body>
@@ -650,6 +706,7 @@
     <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
       <button class="btn-primary" onclick="goToForm()">Get Your Roadmap →</button>
       <button class="btn-secondary" onclick="goToDemoResults()">See a Demo</button>
+      <button class="btn-secondary" onclick="goToLibrary()">📚 Browse Roadmaps</button>
     </div>
   </section>
 
@@ -936,6 +993,7 @@
         <li class="nav-item" data-panel="chat"             onclick="setPanel('chat', this)"><span class="nav-icon">💬</span> AI Career Chat</li>
         <li class="nav-item" data-panel="interview"        onclick="setPanel('interview', this)"><span class="nav-icon">🎯</span> Mock Interview</li>
         <li class="nav-item" data-panel="insights"         onclick="setPanel('insights', this)"><span class="nav-icon">📈</span> Market Insights</li>
+        <li class="nav-item" data-panel="library"          onclick="setPanel('library', this)"><span class="nav-icon">📚</span> Roadmap Library</li>
       </ul>
     </div>
 
@@ -1063,6 +1121,59 @@
         </div>
       </div>
 
+      <!-- PANEL: ROADMAP LIBRARY -->
+      <div class="panel-section" id="panel-library">
+        <div class="results-header">
+          <div>
+            <h2>Roadmap Library</h2>
+            <p>Explore full learning roadmaps for every career path — sourced from roadmap.sh</p>
+          </div>
+        </div>
+        <div class="lib-controls">
+          <div class="lib-search-wrap">
+            <span class="lib-search-icon">⌕</span>
+            <input type="text" id="lib-search" class="lib-search" placeholder="Search roadmaps, topics, tools…" oninput="filterLibrary()">
+          </div>
+          <div class="lib-filters">
+            <button class="lib-filter active" data-cat="all"    onclick="setLibCat('all',this)">All</button>
+            <button class="lib-filter" data-cat="ai"     onclick="setLibCat('ai',this)">AI / Data</button>
+            <button class="lib-filter" data-cat="web"    onclick="setLibCat('web',this)">Web Dev</button>
+            <button class="lib-filter" data-cat="devops" onclick="setLibCat('devops',this)">DevOps</button>
+            <button class="lib-filter" data-cat="mobile" onclick="setLibCat('mobile',this)">Mobile</button>
+            <button class="lib-filter" data-cat="design" onclick="setLibCat('design',this)">Design</button>
+            <button class="lib-filter" data-cat="other"  onclick="setLibCat('other',this)">Other</button>
+          </div>
+        </div>
+        <div class="lib-grid" id="lib-grid"></div>
+        <div class="lib-empty" id="lib-empty" style="display:none">
+          <div style="font-size:32px;margin-bottom:10px">🔍</div>
+          <div style="font-family:var(--font-head);font-size:16px;margin-bottom:4px">No roadmaps found</div>
+          <div style="font-size:13px;color:var(--dim)">Try a different search or filter</div>
+        </div>
+        <div class="lib-modal-overlay" id="lib-modal-overlay" onclick="closeLibModal(event)">
+          <div class="lib-modal" id="lib-modal">
+            <button class="lib-modal-close" onclick="closeLibModal()">✕</button>
+            <div class="lib-modal-hero">
+              <div class="lib-modal-icon" id="lm-icon"></div>
+              <div>
+                <h3 class="lib-modal-title" id="lm-title"></h3>
+                <p class="lib-modal-desc" id="lm-desc"></p>
+              </div>
+            </div>
+            <div class="lib-modal-body">
+              <div class="lib-sec-label">Key Topics</div>
+              <div class="lib-topics" id="lm-topics"></div>
+              <div class="lib-sec-label" style="margin-top:22px">Related Paths</div>
+              <div class="lib-related" id="lm-related"></div>
+              <div style="margin-top:24px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+                <a id="lm-link" href="#" target="_blank" class="btn-primary" style="font-size:13px;padding:10px 22px;display:inline-flex;align-items:center;gap:6px">View on roadmap.sh →</a>
+                <button class="btn-secondary" style="font-size:13px;padding:10px 18px" onclick="setGoalFromLibrary()">Set as My Career Goal</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div><!-- end .main-content -->
   </div><!-- end .results-layout -->
 </div><!-- end #screen-results -->
@@ -1137,6 +1248,26 @@ function showScreen(name) {
   if (el) { el.classList.add('active'); window.scrollTo(0,0); }
 }
 function goToForm() { buildSkillsGrid(); showScreen('form'); }
+function goToLibrary() {
+  userData = {
+    name:'Guest', branch:'Computer Science', year:'3rd Year',
+    age:21, cgpa:7.5, backlogs:0, attendance_percentage:80,
+    coding_skill_score:60, problem_solving_score:65, communication_score:65,
+    leadership_score:55, mock_interview_score:55, aptitude_test_score:65,
+    teamwork_score:65, extracurricular_score:55,
+    internships:1, projects:2, hackathon:'No',
+    goal:'AI / ML Engineer', skills:[],
+  };
+  selectedSkills = [];
+  startLoading();
+  // After loading, switch to library panel
+  const _origShow = showResults;
+  showResults = function() {
+    _origShow();
+    showResults = _origShow;
+    setTimeout(() => setPanel('library', document.querySelector('.nav-item[data-panel="library"]')), 100);
+  };
+}
 
 function goToDemoResults() {
   userData = {
@@ -1601,6 +1732,7 @@ function setPanel(name, el) {
     }, 50);
   }
   if (name === 'insights') setTimeout(buildInsightsCharts, 150);
+  if (name === 'library')  { renderLibCards(); }
 }
 
 // ═══════════════════════════════════════════════
@@ -1743,9 +1875,210 @@ function buildInsightsCharts() {
   });
 }
 
+
+// ═══════════════════════════════════════════════
+// ROADMAP LIBRARY
+// ═══════════════════════════════════════════════
+const LIB_ROADMAPS = [
+  { id:'ai-engineer', title:'AI Engineer', emoji:'🤖', category:'ai', cat_cls:'lcat-ai',
+    desc:'Build AI-powered apps using LLMs, embeddings, RAG pipelines, and agentic systems. Integrate OpenAI, Anthropic, and open-source models.',
+    topics:['LLMs','RAG','Embeddings','Vector DBs','Prompt Engineering','AI Agents','OpenAI API','Hugging Face','Ollama','Multimodal AI','Fine-tuning','LangChain','LlamaIndex'],
+    related:['AI & Data Scientist','Prompt Engineering','ML Engineer','Full Stack'],
+    url:'https://roadmap.sh/ai-engineer', count:'40+', goal:'AI / ML Engineer' },
+  { id:'ml-engineer', title:'Machine Learning Engineer', emoji:'🧠', category:'ai', cat_cls:'lcat-ai',
+    desc:'Master mathematical foundations, classical ML algorithms, deep learning architectures, and production deployment of ML systems.',
+    topics:['Linear Algebra','Calculus','Supervised Learning','Deep Learning','Neural Networks','PyTorch','TensorFlow','Scikit-learn','CNN','RNN','Transformers','NLP','Model Evaluation'],
+    related:['AI Engineer','AI & Data Scientist','MLOps','Data Engineer'],
+    url:'https://roadmap.sh/mlops', count:'50+', goal:'AI / ML Engineer' },
+  { id:'data-scientist', title:'AI & Data Scientist', emoji:'📊', category:'data', cat_cls:'lcat-data',
+    desc:'From statistics and EDA to advanced ML and MLOps — a structured path with curated courses and resources for aspiring data scientists.',
+    topics:['Statistics','Python','SQL','EDA','Scikit-learn','Deep Learning','A/B Testing','Experiment Design','Econometrics','MLOps','Hypothesis Testing','Pandas'],
+    related:['ML Engineer','Data Analyst','Data Engineer','Prompt Engineering'],
+    url:'https://roadmap.sh/ai-data-scientist', count:'35+', goal:'Data Scientist' },
+  { id:'data-engineer', title:'Data Engineer', emoji:'⚙️', category:'data', cat_cls:'lcat-data',
+    desc:'Design and build large-scale data pipelines, warehouses, and streaming systems. Master ETL, cloud platforms, and distributed computing.',
+    topics:['Apache Kafka','Apache Spark','Airflow','dbt','Snowflake','BigQuery','Redshift','ETL','Docker','Kubernetes','Terraform','PostgreSQL','Data Modeling'],
+    related:['Data Analyst','ML Engineer','DevOps','Cloud'],
+    url:'https://roadmap.sh/data-engineer', count:'60+', goal:'Data Scientist' },
+  { id:'data-analyst', title:'Data Analyst', emoji:'📈', category:'data', cat_cls:'lcat-data',
+    desc:'Analyze data to drive business decisions. Learn SQL, Python, Excel, visualization tools, and statistical analysis from scratch.',
+    topics:['SQL','Python','Pandas','Tableau','Power BI','Excel','Matplotlib','Seaborn','Statistics','A/B Testing','Regression','Hadoop','Spark'],
+    related:['Data Engineer','AI & Data Scientist','Business Intelligence'],
+    url:'https://roadmap.sh/data-analyst', count:'40+', goal:'Data Analyst' },
+  { id:'fullstack', title:'Full Stack Developer', emoji:'🌐', category:'web', cat_cls:'lcat-web',
+    desc:'Go from zero to full-stack — HTML, CSS, JavaScript, React on the frontend, Node.js on the backend, and AWS for deployment.',
+    topics:['HTML','CSS','JavaScript','React','Tailwind CSS','Node.js','RESTful APIs','PostgreSQL','Redis','Git','AWS','GitHub Actions','Terraform'],
+    related:['Frontend','Backend','DevOps'],
+    url:'https://roadmap.sh/full-stack', count:'45+', goal:'Full Stack Developer' },
+  { id:'frontend', title:'Frontend Developer', emoji:'🎨', category:'web', cat_cls:'lcat-web',
+    desc:'Build modern, accessible, performant web interfaces. Master HTML, CSS, JavaScript, React, and the full frontend ecosystem.',
+    topics:['HTML','CSS','JavaScript','TypeScript','React','Vue.js','Angular','Next.js','Webpack','Vite','Testing','Web Security','Performance','PWA'],
+    related:['Full Stack','UX Design','Backend'],
+    url:'https://roadmap.sh/frontend', count:'55+', goal:'Full Stack Developer' },
+  { id:'devops', title:'DevOps Engineer', emoji:'🔧', category:'devops', cat_cls:'lcat-devops',
+    desc:'Bridge development and operations — master Linux, containers, CI/CD pipelines, infrastructure as code, and cloud platforms.',
+    topics:['Linux','Docker','Kubernetes','Terraform','Ansible','GitHub Actions','AWS','Prometheus','Grafana','Nginx','Git','CI/CD','Service Mesh'],
+    related:['Backend','Cloud','Security','Full Stack'],
+    url:'https://roadmap.sh/devops', count:'65+', goal:'DevOps Engineer' },
+  { id:'product-manager', title:'Product Manager', emoji:'🎯', category:'other', cat_cls:'lcat-other',
+    desc:'Lead product strategy, discovery, and delivery. Learn frameworks for roadmapping, user research, stakeholder management, and data-driven decisions.',
+    topics:['Product Strategy','User Research','Roadmapping','Agile','Scrum','A/B Testing','OKRs','Jira','User Stories','MVP','Go-to-Market','Analytics','Stakeholder Mgmt'],
+    related:['UX Design','Data Analyst','Engineering Manager'],
+    url:'https://roadmap.sh/product-manager', count:'50+', goal:'Product Manager' },
+  { id:'blockchain', title:'Blockchain Developer', emoji:'⛓️', category:'other', cat_cls:'lcat-other',
+    desc:'Build decentralized applications on Ethereum and other chains. Learn Solidity, smart contracts, DeFi protocols, and Web3 tooling.',
+    topics:['Solidity','Ethereum','Smart Contracts','Hardhat','Web3.js','Ethers.js','IPFS','DeFi','NFTs','Chainlink','Layer 2','Security','Testing'],
+    related:['Backend','JavaScript','Python','Rust'],
+    url:'https://roadmap.sh/blockchain', count:'45+', goal:'Blockchain Developer' },
+  { id:'android', title:'Android Developer', emoji:'📱', category:'mobile', cat_cls:'lcat-mobile',
+    desc:'Build native Android apps with Kotlin and Jetpack Compose. Cover architecture patterns, async programming, Firebase, and Play Store distribution.',
+    topics:['Kotlin','Jetpack Compose','MVVM','Coroutines','Room','Retrofit','Hilt','Firebase','Navigation','RecyclerView','LiveData','Flow','Testing'],
+    related:['iOS','React Native','Flutter','Full Stack'],
+    url:'https://roadmap.sh/android', count:'45+', goal:'Mobile App Developer' },
+  { id:'ux-design', title:'UX Designer', emoji:'✏️', category:'design', cat_cls:'lcat-design',
+    desc:'Design user-centered digital experiences. Learn behavioral science, wireframing, prototyping, UX patterns, and testing methodologies.',
+    topics:['User Research','Wireframing','Figma','Prototyping','A/B Testing','Usability Testing','Design Thinking','Behavioral Science','Information Architecture','Accessibility','Design Systems'],
+    related:['Product Manager','Frontend','Design System'],
+    url:'https://roadmap.sh/ux-design', count:'35+', goal:'UI/UX Designer' },
+];
+
+let libActiveCat = 'all';
+let libSearchTerm = '';
+let libOpenId = null;
+
+function buildLibrary() {
+  renderLibCards();
+}
+
+function setLibCat(cat, el) {
+  libActiveCat = cat;
+  document.querySelectorAll('.lib-filter').forEach(b => b.classList.remove('active'));
+  if (el) el.classList.add('active');
+  renderLibCards();
+}
+
+function filterLibrary() {
+  libSearchTerm = (document.getElementById('lib-search')?.value || '').toLowerCase().trim();
+  renderLibCards();
+}
+
+function renderLibCards() {
+  const userGoal = userData?.goal || '';
+  const filtered = LIB_ROADMAPS.filter(r => {
+    const catOk = libActiveCat === 'all' || r.category === libActiveCat ||
+      (libActiveCat === 'ai' && r.category === 'data');
+    const searchOk = !libSearchTerm ||
+      r.title.toLowerCase().includes(libSearchTerm) ||
+      r.topics.some(t => t.toLowerCase().includes(libSearchTerm)) ||
+      r.desc.toLowerCase().includes(libSearchTerm);
+    return catOk && searchOk;
+  });
+
+  const grid = document.getElementById('lib-grid');
+  const empty = document.getElementById('lib-empty');
+  if (!grid) return;
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    if (empty) empty.style.display = 'block';
+    return;
+  }
+  if (empty) empty.style.display = 'none';
+
+  grid.innerHTML = filtered.map((r, i) => {
+    const isMatch = r.goal === userGoal;
+    return `
+    <div class="lib-card ${r.cat_cls}${isMatch ? ' lib-matched' : ''}" style="animation-delay:${i*0.04}s" onclick="openLibModal('${r.id}')">
+      <div class="lib-card-top">
+        <div class="lib-card-emoji">${r.emoji}</div>
+        <div>
+          <div class="lib-card-title">${r.title}</div>
+          <span class="lib-cat-badge">${r.category.toUpperCase()}</span>
+        </div>
+      </div>
+      <div class="lib-card-pills">
+        ${r.topics.slice(0,4).map(t => `<span class="lib-pill">${t}</span>`).join('')}
+        ${r.topics.length > 4 ? `<span class="lib-pill">+${r.topics.length - 4}</span>` : ''}
+      </div>
+      <div class="lib-card-foot">
+        <span class="lib-topic-count">${r.count} topics</span>
+        <button class="lib-explore">Explore →</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openLibModal(id) {
+  const r = LIB_ROADMAPS.find(x => x.id === id);
+  if (!r) return;
+  libOpenId = id;
+
+  const icon = document.getElementById('lm-icon');
+  icon.textContent = r.emoji;
+  icon.className = 'lib-modal-icon ' + r.cat_cls;
+
+  document.getElementById('lm-title').textContent = r.title;
+  document.getElementById('lm-desc').textContent = r.desc;
+  document.getElementById('lm-topics').innerHTML = r.topics.map(t => `<span class="lib-topic-tag">${t}</span>`).join('');
+  document.getElementById('lm-related').innerHTML = r.related.map(rel =>
+    `<span class="lib-rel-chip" onclick="libSearchRelated('${rel}')">${rel}</span>`
+  ).join('');
+  document.getElementById('lm-link').href = r.url;
+
+  document.getElementById('lib-modal-overlay').classList.add('open');
+}
+
+function closeLibModal(e) {
+  if (!e || e.target === document.getElementById('lib-modal-overlay')) {
+    document.getElementById('lib-modal-overlay').classList.remove('open');
+    libOpenId = null;
+  }
+}
+
+function libSearchRelated(name) {
+  closeLibModal();
+  const inp = document.getElementById('lib-search');
+  if (inp) { inp.value = name; libSearchTerm = name.toLowerCase(); }
+  renderLibCards();
+}
+
+function setGoalFromLibrary() {
+  const r = LIB_ROADMAPS.find(x => x.id === libOpenId);
+  if (!r || !userData) return;
+  userData.goal = r.goal;
+  closeLibModal();
+  // Rebuild career & gap panels with new goal
+  buildCareers(userData);
+  buildSkillGaps(userData);
+  buildRoadmap(userData);
+  // Switch to careers panel
+  setPanel('careers', document.querySelector('.nav-item[data-panel="careers"]'));
+  // Show toast
+  showToast('Goal updated to ' + r.goal + ' ✓');
+}
+
+function showToast(msg) {
+  let t = document.getElementById('cf-toast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'cf-toast';
+    t.style.cssText = 'position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:rgba(45,212,160,0.15);border:1px solid rgba(45,212,160,0.4);color:#2dd4a0;font-size:13px;padding:10px 20px;border-radius:20px;z-index:999;backdrop-filter:blur(8px);transition:opacity 0.4s;';
+    document.body.appendChild(t);
+  }
+  t.textContent = msg; t.style.opacity = '1';
+  setTimeout(() => { t.style.opacity = '0'; }, 2500);
+}
+
+// Trigger library build when panel opens
+const _origSetPanel = setPanel;
+
 // ═══════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLibModal();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   buildSkillsGrid();
   // Ping server to update landing chip

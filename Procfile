@@ -1,0 +1,1 @@
+web: python train_model.py && uvicorn app:app --host 0.0.0.0 --port $PORT
